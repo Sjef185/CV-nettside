@@ -1,41 +1,75 @@
 <!DOCTYPE html>
 <html lang="no">
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <title>Min CV og prosjekt(er)</title>
-    </head>
-    <body>
-    <nav>
-        <a href="#cv">CV</a>
-        <a href="#projects">Prosjekter</a>
-        <a href="#contact">Kontakt</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navn · Prosjekter & CV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a href="#intro">Hjem</a>
+      <a href="#education">Utdanning</a>
+      <a href="#skills">Ferdigheter</a>
+      <a href="#projects">Prosjekter</a>
+      <a href="#contact">Kontakt</a>
+      <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Last ned PDF-CV</a>
     </nav>
+  </header>
 
-    <h2 id="cv">CV</h2>
-    <h3>Utdanning</h3>
-    <p>NTNU – Bachelor i Digital infrastruktur og cybersikkerhet (2024–2027)</p>
+  <main class="container">
+    <section id="intro" class="section intro">
+      <h1>Fornavn Etternavn</h1>
+      <p class="lead">Student i Digital infrastruktur og cybersikkerhet ved NTNU. Interessert i nettverk, systemadministrasjon og sikkerhet.</p>
+    </section>
 
-    <h3>Erfaring</h3>
-    <p>Sport Outlet – Retail Assistant (2023–nåværende)</p>
-    <p>XXL – Sykkelmekaniker (2023)</p>
+    <section id="education" class="section">
+      <h2>Utdanning</h2>
+      <ul class="list">
+        <li><strong>NTNU</strong> – Bachelor i Digital infrastruktur og cybersikkerhet (2024–2027)</li>
+        <li><strong>Eilert VGS</strong> – Allmenn (2021–2024)</li>
+      </ul>
+    </section>
 
-    <h2>Teknologier og ferdigheter</h2>
-<ul>
-  <li>Programmering: C, C++, PowerShell, Bash</li>
-  <li>Operativsystemer: Linux og Windows, systemadministrasjon og sikkerhet</li>
-  <li>Nettverk: VLAN, DHCP, subnetting, WAN-teknologier, ruting, brannmurer, VPN, IDS/IPS og nettverksovervåkning</li>
-  <li>Webutvikling: HTML, CSS, grunnleggende JavaScript og full-stack prinsipper</li>
-  <li>Verktøy: Git, GitHub, Wireshark, VirtualBox, Cisco Packet Tracer</li>
-</ul>
+    <section id="skills" class="section">
+      <h2>Teknologier og ferdigheter</h2>
+      <ul class="grid two">
+        <li><strong>Programmering:</strong> C, C++, PowerShell, Bash</li>
+        <li><strong>Operativsystemer:</strong> Linux, Windows (grunnleggende sysadmin & sikkerhet)</li>
+        <li><strong>Nettverk:</strong> VLAN, DHCP, subnetting, ruting, brannmurer, VPN, IDS/IPS</li>
+        <li><strong>Web:</strong> HTML, CSS, grunnleggende JavaScript</li>
+        <li><strong>Verktøy:</strong> Git/GitHub, Wireshark, VirtualBox</li>
+      </ul>
+    </section>
 
+    <section id="projects" class="section">
+      <h2>Prosjekter</h2>
+      <article class="card">
+        <h3>SystemMonitor</h3>
+        <p>PowerShell-basert verktøy som logger CPU/RAM og varsler ved terskler. Brukes til å lære overvåking og automatisk varsling.</p>
+        <p class="meta">Lært: PowerShell, logging, terskelvarsling.</p>
+        <p><a class="link" href="https://github.com/DITTBRUKERNAVN/SystemMonitor" target="_blank" rel="noopener">Se på GitHub</a></p>
+      </article>
+      <!-- Flere prosjekter kan legges til her -->
+    </section>
 
-    <h2 id="projects">Prosjekter</h2>
-    <p><strong>SystemMonitor</strong> – Et lite verktøy skrevet i PowerShell som logger CPU- og RAM-bruk.</p>
-    <p><a href="https://github.com/OmarPashaev/SystemMonitor" target="_blank">Se prosjektet på GitHub</a></p>
+    <section id="contact" class="section">
+      <h2>Kontakt</h2>
+      <ul class="list">
+        <li>E-post: <a href="mailto:din@epost.no">din@epost.no</a></li>
+        <li>GitHub: <a href="https://github.com/DITTBRUKERNAVN" target="_blank" rel="noopener">DITTBRUKERNAVN</a></li>
+      </ul>
+    </section>
+  </main>
 
-    <h2 id="contact">Kontakt</h2>
-    <p>E-post: <a href="mailto:pashaevomar@outlook.com">pashaevomar@outlook.com</a></p>
-    <p>GitHub: <a href="https://github.com/OmarPashaev" target="_blank">OmarPashaev</a></p>
-    </body>
+  <footer class="footer">
+    <small>© <span id="year"></span> · Laget med HTML & CSS · Hostet på GitHub Pages</small>
+  </footer>
+
+  <script>
+    // Sett år i footer automatisk
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
