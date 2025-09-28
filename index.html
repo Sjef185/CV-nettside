@@ -10,27 +10,20 @@
   <header class="topbar">
     <nav class="nav">
       <a href="#intro">Hjem</a>
-      <a href="#education">Utdanning</a>
       <a href="#skills">Ferdigheter</a>
       <a href="#projects">Prosjekter</a>
       <a href="#contact">Kontakt</a>
-      <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Last ned PDF-CV</a>
     </nav>
   </header>
 
   <main class="container">
     <section id="intro" class="section intro">
       <h1>Omar Pashaev</h1>
-      <p class="lead">Student i Digital infrastruktur og cybersikkerhet ved NTNU, med særlig interesse for nettverk, systemadministrasjon og sikkerhet. 
+      <p class="lead">Jeg er en student i digital infrastruktur og cybersikkerhet ved NTNU, med særlig interesse for nettverk, systemadministrasjon og sikkerhet. 
         Jeg liker å lære gjennom praktiske prosjekter og utforske hvordan teori kan brukes i virkelige systemer.</p>
     </section>
 
-    <section id="education" class="section">
-      <h2>Utdanning</h2>
-      <ul class="list">
-        <li><strong>NTNU</strong> – Bachelor i Digital infrastruktur og cybersikkerhet (2024–2027)</li>
-      </ul>
-    </section>
+  
 
     <section id="skills" class="section">
       <h2>Teknologier og ferdigheter</h2>
@@ -46,16 +39,28 @@
 
     <section id="projects" class="section">
       <h2>Prosjekter</h2>
-       <article class="card">
-     <h3>Passiv Wi-Fi Monitor (Raspberry Pi + Alfa)</h3>
-        <p>Passiv innsamling og anonymisert analyse av Wi-Fi-metadata (SSID, MAC-hash, RSSI) i eget testmiljø. Verktøy: tcpdump/airodump, tshark og et lite parse-script.</p>
-        <p class="meta">Lært: monitor mode, PCAP-fangst, grunnleggende trådløs analyse, MAC-randomisering og etiske hensyn.</p>
+        <article class="card">
+    <h3>Passive Wi-Fi Monitor (Raspberry Pi + Alfa)</h3>
+    <p>
+      Jeg ønsket å forstå hvordan trådløse nettverk kan analyseres passivt, og hvilke metadata som faktisk er tilgjengelig uten aktiv tilkobling. 
+      For å utforske dette satte jeg opp en Raspberry Pi med en Alfa Wi-Fi-adapter i monitor mode og samlet inn PCAP-filer med verktøy som <em>tcpdump</em> og <em>airodump-ng</em>.
+      Dataene analyserte jeg videre med Wireshark og tshark, og jeg laget et lite opplegg for å anonymisere MAC-adresser før lagring.
+    </p>
+    <p>
+      Dette prosjektet ga meg praktisk erfaring med monitor mode, PCAP-fangst og grunnleggende trådløs analyse. Jeg fikk også innsikt i hvordan MAC-randomisering påvirker resultatene, og ikke minst viktigheten av å ha klare etiske rammer rundt datasniffing.
+    </p>
         <p><a class="link" href="https://github.com/OmarPashaev/wifi-monitor" target="_blank" rel="noopener">Se på GitHub</a></p>
      </article>
       <article class="card">
         <h3>SystemMonitor</h3>
-        <p>PowerShell-basert verktøy som logger CPU/RAM og varsler ved terskler. Brukes til å lære overvåking og automatisk varsling.</p>
-        <p class="meta">Lært: PowerShell, logging, terskelvarsling.</p>
+       <p>
+      Jeg ville finne en enkel måte å overvåke CPU- og RAM-bruk på en Windows-maskin uten å være avhengig av tredjepartsverktøy. 
+      Løsningen ble å lage et eget PowerShell-script som kontinuerlig logger ressursbruk og sender varsler når egne grenseverdier for CPU og RAM blir nådd.
+      Underveis brukte jeg PowerShells innebygde cmdlets og Windows sitt loggsystem.
+    </p>
+    <p>
+      Prosjektet lærte meg mer om scripting og automatisering, og ga meg en bedre forståelse for hvordan enkle prinsipper for overvåking i liten skala ligner på metodene som brukes i større SIEM-løsninger i et SOC-miljø.
+    </p>
         <p><a class="link" href="https://github.com/OmarPashaev/SystemMonitor" target="_blank" rel="noopener">Se på GitHub</a></p>
       </article>
     </section>
