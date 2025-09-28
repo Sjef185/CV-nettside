@@ -71,3 +71,59 @@ body {
 h1,h2,h3 { margin: 0 0 8px 0; }
 p { margin: 6px 0; }
 a.link { color: #2563eb; font-weight: 600; }
+
+/* Litt mer luft i seksjoner */
+.section { padding: 24px; }
+
+/* Overskrifter: skaler pent på mobil/desktop */
+h1 { font-size: clamp(1.6rem, 2.5vw + 1rem, 2.2rem); }
+h2 { font-size: clamp(1.2rem, 1.2vw + .9rem, 1.6rem); }
+h3 { font-size: clamp(1.05rem, 1vw + .8rem, 1.3rem); }
+
+/* Intro-layout + profilbilde (for "Forside" + "Om meg") */
+.intro-wrap {
+  display: grid;
+  gap: 16px;
+  align-items: center;
+}
+.profile {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  justify-self: start;
+}
+.subtle { opacity: 0.9; }
+
+/* To kolonner på større skjermer */
+@media (min-width: 760px) {
+  .intro-wrap { grid-template-columns: 1fr auto; }
+}
+
+/* Thumbnail til prosjekt-screenshots */
+.thumb {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  display: block;
+  margin: 8px 0 10px;
+}
+
+/* Bedre tastaturfokus (tilgjengelighet) */
+.nav a:focus-visible,
+a.link:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Respektér redusert bevegelse */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .nav a, .nav .btn, a.link { transition: none !important; }
+}
+
+/* Litt bedre mellomrom under seksjonsoverskrifter */
+.section h2 { margin-bottom: 8px; }
